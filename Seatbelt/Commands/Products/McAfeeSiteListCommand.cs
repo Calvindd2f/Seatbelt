@@ -109,14 +109,8 @@ namespace Seatbelt.Commands
                     xmlString = xmlString.Replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
 
                     var xmlDoc = new XmlDocument();
-                    var xmlReaderSettings = new XmlReaderSettings();
-                    xmlReaderSettings.XmlResolver = null; // Disable external entity resolution
-                    xmlReaderSettings.DtdProcessing = DtdProcessing.Ignore; // Ignore DTD processing
-
-                    using (var xmlReader = XmlReader.Create(new StringReader(xmlString), xmlReaderSettings))
-                    {
-                        xmlDoc.Load(xmlReader);
-                    }
+                    
+                    xmlDoc.LoadXml(xmlString);
 
                     var sites = xmlDoc.GetElementsByTagName("SiteList");
 
