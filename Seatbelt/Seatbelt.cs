@@ -168,8 +168,8 @@ namespace Seatbelt
             _outputSink.WriteHost("    'Seatbelt.exe \"<Command> [argument]\"' will pass an argument to a command that supports it (note the quotes).");
             _outputSink.WriteHost("    'Seatbelt.exe -group=all' will run ALL enumeration checks, can be combined with \"-full\".");
             _outputSink.WriteHost("    'Seatbelt.exe -group=all -AuditPolicies' will run all enumeration checks EXCEPT AuditPolicies, can be combined with \"-full\".");
-            _outputSink.WriteHost("    'Seatbelt.exe <Command> -computername=COMPUTER.DOMAIN.COM [-username=DOMAIN\\USER -password=PASSWORD]' will run an applicable check remotely");
-            _outputSink.WriteHost("    'Seatbelt.exe -group=remote -computername=COMPUTER.DOMAIN.COM [-username=DOMAIN\\USER -password=PASSWORD]' will run remote specific checks");
+            _outputSink.WriteHost("    'Seatbelt.exe <Command> -computername=COMPUTER.DOMAIN.COM [-username=DOMAIN\\USER -{0}={0}]' will run an applicable check remotely");
+            _outputSink.WriteHost("    'Seatbelt.exe -group=remote -computername=COMPUTER.DOMAIN.COM [-username=DOMAIN\\USER -{0}={0}]' will run remote specific checks");
             _outputSink.WriteHost("    'Seatbelt.exe -group=system -outputfile=\"C:\\Temp\\out.txt\"' will run system checks and output to a .txt file.");
             _outputSink.WriteHost("    'Seatbelt.exe -group=user -q -outputfile=\"C:\\Temp\\out.json\"' will run in quiet mode with user checks and output to a .json file.");
 
